@@ -1,0 +1,310 @@
+{
+    "districts": [
+        "Aberdeen", 
+        "Admiralty", 
+        "Ap Lei Chau", 
+        "Causeway Bay", 
+        "Central", 
+        "Chai Wan", 
+        "Cyberport", 
+        "Deep Water Bay", 
+        "Happy Valley", 
+        "Heng Fa Chuen", 
+        "Lan Kwai Fong", 
+        "Mid-Levels", 
+        "North Point", 
+        "Pok Fu Lam", 
+        "Quarry Bay", 
+        "Repulse Bay", 
+        "Sai Wan Ho", 
+        "Shau Kei Wan", 
+        "Shek O", 
+        "Sheung Wan", 
+        "Soho", 
+        "Stanley", 
+        "Tai Hang", 
+        "Tai Koo", 
+        "The Peak", 
+        "Tin Hau", 
+        "Wan Chai", 
+        "Western District"
+    ], 
+    "kinds": {
+        "All Asian": [
+            {
+                "code": 2001, 
+                "name": "Australian"
+            }, 
+            {
+                "code": 2002, 
+                "name": "Indian"
+            }, 
+            {
+                "code": 2003, 
+                "name": "Indonesian"
+            }, 
+            {
+                "code": 2004, 
+                "name": "Japanese"
+            }, 
+            {
+                "code": 2005, 
+                "name": "Korean"
+            }, 
+            {
+                "code": 2006, 
+                "name": "Lebanon"
+            }, 
+            {
+                "code": 2007, 
+                "name": "Middle Eastern"
+            }, 
+            {
+                "code": 2008, 
+                "name": "Myanmar"
+            }, 
+            {
+                "code": 2009, 
+                "name": "Nepalese"
+            }, 
+            {
+                "code": 2010, 
+                "name": "Philippines"
+            }, 
+            {
+                "code": 2011, 
+                "name": "Singaporean & Malaysian"
+            }, 
+            {
+                "code": 2012, 
+                "name": "Sri Lanka"
+            }, 
+            {
+                "code": 2013, 
+                "name": "Thai"
+            }, 
+            {
+                "code": 2014, 
+                "name": "Vietnamese"
+            }
+        ], 
+        "All Chinese": [
+            {
+                "code": 1001, 
+                "name": "Anhui"
+            }, 
+            {
+                "code": 1002, 
+                "name": "Beijing"
+            }, 
+            {
+                "code": 1003, 
+                "name": "Chiu Chow"
+            }, 
+            {
+                "code": 1004, 
+                "name": "Fujian"
+            }, 
+            {
+                "code": 1005, 
+                "name": "Gan (Jiangxi)"
+            }, 
+            {
+                "code": 1006, 
+                "name": "Guangdong"
+            }, 
+            {
+                "code": 1007, 
+                "name": "Guangxi"
+            }, 
+            {
+                "code": 1008, 
+                "name": "Guizhou"
+            }, 
+            {
+                "code": 1009, 
+                "name": "Hakka"
+            }, 
+            {
+                "code": 1010, 
+                "name": "Henan"
+            }, 
+            {
+                "code": 1011, 
+                "name": "Hong Kong Style"
+            }, 
+            {
+                "code": 1012, 
+                "name": "Huaiyang"
+            }, 
+            {
+                "code": 1013, 
+                "name": "Hubei"
+            }, 
+            {
+                "code": 1014, 
+                "name": "Hunan"
+            }, 
+            {
+                "code": 1015, 
+                "name": "Jiang-Zhe"
+            }, 
+            {
+                "code": 1016, 
+                "name": "Jingchuanhu"
+            }, 
+            {
+                "code": 1017, 
+                "name": "Mongolia"
+            }, 
+            {
+                "code": 1018, 
+                "name": "Northeastern"
+            }, 
+            {
+                "code": 1019, 
+                "name": "Shandong"
+            }, 
+            {
+                "code": 1020, 
+                "name": "Shanghai"
+            }, 
+            {
+                "code": 1021, 
+                "name": "Shanxi (Jin)"
+            }, 
+            {
+                "code": 1022, 
+                "name": "Shanxi (Shan)"
+            }, 
+            {
+                "code": 1023, 
+                "name": "Shunde"
+            }, 
+            {
+                "code": 1024, 
+                "name": "Sichuan"
+            }, 
+            {
+                "code": 1025, 
+                "name": "Taiwan"
+            }, 
+            {
+                "code": 1026, 
+                "name": "Village Food"
+            }, 
+            {
+                "code": 1027, 
+                "name": "Xinjiang"
+            }, 
+            {
+                "code": 1028, 
+                "name": "Yunnan"
+            }
+        ], 
+        "All European": [
+            {
+                "code": 3001, 
+                "name": "Austrian"
+            }, 
+            {
+                "code": 3002, 
+                "name": "Belgian"
+            }, 
+            {
+                "code": 3003, 
+                "name": "British"
+            }, 
+            {
+                "code": 3004, 
+                "name": "Dutch"
+            }, 
+            {
+                "code": 3005, 
+                "name": "French"
+            }, 
+            {
+                "code": 3006, 
+                "name": "German"
+            }, 
+            {
+                "code": 3007, 
+                "name": "Greek"
+            }, 
+            {
+                "code": 3008, 
+                "name": "Irish"
+            }, 
+            {
+                "code": 3009, 
+                "name": "Italian"
+            }, 
+            {
+                "code": 3010, 
+                "name": "Jewish"
+            }, 
+            {
+                "code": 3011, 
+                "name": "Mediterranean"
+            }, 
+            {
+                "code": 3012, 
+                "name": "Portuguese"
+            }, 
+            {
+                "code": 3013, 
+                "name": "Russian"
+            }, 
+            {
+                "code": 3014, 
+                "name": "Spanish"
+            }, 
+            {
+                "code": 3015, 
+                "name": "Swiss"
+            }, 
+            {
+                "code": 3016, 
+                "name": "Turkish"
+            }
+        ], 
+        "All North & South American": [
+            {
+                "code": 4001, 
+                "name": "American"
+            }, 
+            {
+                "code": 4002, 
+                "name": "Argentinian"
+            }, 
+            {
+                "code": 4003, 
+                "name": "Brazilian"
+            }, 
+            {
+                "code": 4004, 
+                "name": "Cuba"
+            }, 
+            {
+                "code": 4005, 
+                "name": "Mexican"
+            }, 
+            {
+                "code": 4006, 
+                "name": "Peruvian"
+            }, 
+            {
+                "code": 4007, 
+                "name": "Western"
+            }
+        ]
+    }, 
+    "prices": [
+        "Below $50", 
+        "$51-$100", 
+        "$101-$200", 
+        "$201-$400", 
+        "$401-$800",
+        "Above $800"
+    ]
+}
