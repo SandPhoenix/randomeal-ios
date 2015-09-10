@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nzn-Q6-4hO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nzn-Q6-4hO">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -29,7 +29,6 @@
                                 <state key="normal" title="Press for food"/>
                                 <connections>
                                     <action selector="restaurantButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZ6-OE-3dU"/>
-                                    <segue destination="P21-Q8-J4T" kind="show" id="EwJ-pm-4dA"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l0g-eK-duS" customClass="FUISegmentedControl">
@@ -168,7 +167,4 @@
             <point key="canvasLocation" x="-96" y="-16"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="EwJ-pm-4dA"/>
-    </inferredMetricsTieBreakers>
 </document>

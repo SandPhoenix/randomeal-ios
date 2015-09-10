@@ -10,24 +10,22 @@
 
 @implementation RMShop
 
-@synthesize name,address,price,latitude,longitude,kind,district,rating,image_url,url;
+@synthesize name,address,latitude,longitude,rating,image_url,url;
 
--(id) initWithResultSet:(FMResultSet *)set{
+-(id) initWithResultSet:(NSDictionary *)dict{
     if (self == [super init]) {
-        do {
             
-            name = [set stringForColumn:@"name"];
-            address = [set stringForColumn:@"address"];
-            price = [set stringForColumn:@"price"];
-            latitude = [NSNumber numberWithDouble:[set doubleForColumn:@"lat"]];
-            longitude = [NSNumber numberWithDouble:[set doubleForColumn:@"long"]];
-            kind = [NSNumber numberWithInt:[set intForColumn:@"kind"]];
-            district = [NSNumber numberWithInt:[set intForColumn:@"district"]];
-            rating = [NSNumber numberWithDouble:[set doubleForColumn:@"rating"]];
-            image_url = [set stringForColumn:@"image"];
-            url = [set stringForColumn:@"url"];
-            
-        }while ([set next]);
+        name = dict[@"name"];
+        address = dict[@"location"][@"display_address"][0];
+//            price = [set stringForColumn:@"price"];
+        latitude = dict[@"location"][@"coordinate"][@"latitude"];
+        longitude = dict[@"location"][@"coordinate"][@"longitude"];
+//        kind = [NSNumber numberWithInt:[set intForColumn:@"kind"]];
+//        district = [NSNumber numberWithInt:[set intForColumn:@"district"]];
+        rating = dict[@"rating"];
+        image_url = dict[@"image_url"];
+        url = dict[@"url"];
+        
     }
     return self;
 }

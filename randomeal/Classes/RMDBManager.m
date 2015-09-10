@@ -83,58 +83,76 @@
 }
 
 
--(RMShop*) getShopWithinRadius:(NSNumber *)radius andPrice:(NSNumber *)price andKind:(NSArray *)kind{
+//-(RMShop*) getShopWithinRadius:(NSNumber *)radius andPrice:(NSNumber *)price andKind:(NSArray *)kind{
+//    
+//    NSString *baseQuery = [NSString stringWithFormat:@"SELECT * FROM places WHERE distance(lat,long,%f,%f) <= %f ",location.coordinate.latitude,location.coordinate.longitude,[radius floatValue]];
+//    
+//    if (price != nil) {
+//        baseQuery = [baseQuery stringByAppendingString:[NSString stringWithFormat:@" AND price <= %d",[price intValue]]];
+//    }
+//    
+//    if (kind != nil) {
+//        if (kind.count > 0) {
+//            NSString *baseKindQuery = @" AND ( ";
+//            for (NSNumber *k in kind) {
+//                if ([kind indexOfObject:k] != kind.count - 1) {
+//                    baseKindQuery = [baseKindQuery stringByAppendingString:[NSString stringWithFormat:@"kind == %d OR ",k.intValue]];
+//                }else{
+//                    baseKindQuery = [baseKindQuery stringByAppendingString:[NSString stringWithFormat:@"kind == %d )",k.intValue]];
+//                }
+//                
+//               
+//                
+//            }
+//            baseQuery = [baseQuery stringByAppendingString:baseKindQuery];
+//        }
+//        
+//    }
+//    
+//    baseQuery = [baseQuery stringByAppendingString:@" ORDER BY rating DESC LIMIT 1"];
+//    
+//    NSLog(@"%@",baseQuery);
+//    
+//    FMResultSet *set = [database executeQuery:baseQuery];
+//    
+//    if ([set next]) {
+//        RMShop *shop = [[RMShop alloc] initWithResultSet:set];
+//        currentShop = shop;
+//        NSLog(@"%@",currentShop);
+//        return shop;
+//    }else{
+//        return nil;
+//    }
+//    
+//    
+//    
+//    
+//}
+
+-(void) getShopWithinRadius:(NSNumber *)radius completionHandler:(void (^)(RMShop *, NSError *))completion{
     
-    NSString *baseQuery = [NSString stringWithFormat:@"SELECT * FROM places WHERE distance(lat,long,%f,%f) <= %f ",location.coordinate.latitude,location.coordinate.longitude,[radius floatValue]];
-    
-    if (price != nil) {
-        baseQuery = [baseQuery stringByAppendingString:[NSString stringWithFormat:@" AND price <= %d",[price intValue]]];
-    }
-    
-    if (kind != nil) {
-        if (kind.count > 0) {
-            NSString *baseKindQuery = @" AND ( ";
-            for (NSNumber *k in kind) {
-                if ([kind indexOfObject:k] != kind.count - 1) {
-                    baseKindQuery = [baseKindQuery stringByAppendingString:[NSString stringWithFormat:@"kind == %d OR ",k.intValue]];
-                }else{
-                    baseKindQuery = [baseKindQuery stringByAppendingString:[NSString stringWithFormat:@"kind == %d )",k.intValue]];
-                }
-                
-               
-                
-            }
-            baseQuery = [baseQuery stringByAppendingString:baseKindQuery];
+    YPAPISample *yelp = [[YPAPISample alloc] init];
+    [yelp queryTopBusinessInfoForLocation:location radius:radius completionHandler:^(NSDictionary* dict,NSError *error){
+        
+        if (error) {
+            completion(nil,error);
+        }else{
+            RMShop *shop = [[RMShop alloc] initWithResultSet:dict];
+            completion(shop,error);
+            NSLog(@"done downloading");
         }
         
-    }
-    
-    baseQuery = [baseQuery stringByAppendingString:@" ORDER BY rating DESC LIMIT 1"];
-    
-    NSLog(@"%@",baseQuery);
-    
-    FMResultSet *set = [database executeQuery:baseQuery];
-    
-    if ([set next]) {
-        RMShop *shop = [[RMShop alloc] initWithResultSet:set];
-        currentShop = shop;
-        NSLog(@"%@",currentShop);
-        return shop;
-    }else{
-        return nil;
-    }
-    
-    
-    
+    }];
     
 }
 
--(void) yelpTest{
-    YPAPISample *y = [[YPAPISample alloc] init];
-    [y queryTopBusinessInfoForTerm:@"italian" location:location completionHandler:^(NSDictionary *response, NSError *error){
-        NSLog(@"%@",response);
-    }];
-}
+//-(void) yelpTest{
+//    YPAPISample *y = [[YPAPISample alloc] init];
+//    [y queryTopBusinessInfoForTerm:@"italian" location:location completionHandler:^(NSDictionary *response, NSError *error){
+//        RMShop *s = [[RMShop alloc] initWithResultSet:response];
+//        NSLog(@"%@",s);
+//    }];
+//}
 
 #pragma Location handling
 

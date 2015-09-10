@@ -27,7 +27,7 @@
 
 
 + (RMDBManager*) sharedManager;
-- (RMShop*) getShopWithinRadius:(NSNumber*)radius andPrice:(NSNumber*)price andKind:(NSArray*)kind;
+- (void) getShopWithinRadius:(NSNumber*)radius completionHandler:(void (^)(RMShop *shop, NSError *error))completion;
 -(void) yelpTest;
 
 

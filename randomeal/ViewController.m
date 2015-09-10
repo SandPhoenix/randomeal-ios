@@ -42,18 +42,25 @@
 
 - (IBAction)restaurantButtonTapped:(id)sender {
     
-//    NSNumber *radius = [NSNumber numberWithFloat:self.radiusSlider.value * 1500.0f + 500.0f];
+    NSNumber *radius = [NSNumber numberWithFloat:self.radiusSlider.value * 1500.0f + 500.0f];
 //    NSNumber *price = [NSNumber numberWithInteger:self.priceSegmentedDisplay.selectedSegmentIndex];
 //    
-//    currentShop = [manager getShopWithinRadius:radius andPrice:price andKind:chosenKindArray];
-//    if (currentShop) {
-//        
-//    }else{
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Our hamsters are tired." message:@"It seems like our hamsters didn't find anything... better luck next time!" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
-//        [alert show];
-//    }
+    [manager getShopWithinRadius:radius completionHandler:^(RMShop *shop,NSError *error){
+        if (error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Our hamsters are tired." message:@"It seems like our hamsters didn't find anything... better luck next time!" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+            [alert show];
+        }else{
+            currentShop = shop;
+            manager.currentShop = shop;
+            NSLog(@"shop: %@",shop);
+            
+            [self performSegueWithIdentifier:@"pushToDetail" sender:self];
+            
+        }
+    }];
     
-    [manager yelpTest];
+    
+//    [manager yelpTest];
     
     
 }

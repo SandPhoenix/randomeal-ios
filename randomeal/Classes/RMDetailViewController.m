@@ -14,7 +14,7 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     shop = [[RMDBManager sharedManager] currentShop];
-    [self setupMaps];
+//    [self setupMaps];
     
     self.view.backgroundColor = UIColorFromHEX(BACKGROUND_COLOR);
     
