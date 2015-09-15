@@ -20,6 +20,7 @@
     [super viewWillAppear:true];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     [self updateSliderLabel];
+//    self.foodButton.cornerRadius = self.foodButton.frame.size.height/2;
 }
 
 
@@ -29,6 +30,12 @@
     [self setupUI];
     manager = [RMDBManager sharedManager];
     [self setupKinds];
+    self.navigationItem.backBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:@""
+                                      style:UIBarButtonItemStylePlain
+                                     target:nil
+                                     action:nil];
+//    self.foodButton.cornerRadius = self.foodButton.frame.size.height/2; 
 //    [self performSegueWithIdentifier:@"pushToDetail" sender:self];
     
     
@@ -42,19 +49,23 @@
 
 - (IBAction)restaurantButtonTapped:(id)sender {
     
-    NSNumber *radius = [NSNumber numberWithFloat:self.radiusSlider.value * 1500.0f + 500.0f];
 //    NSNumber *price = [NSNumber numberWithInteger:self.priceSegmentedDisplay.selectedSegmentIndex];
-//    
-    [manager getShopWithinRadius:radius completionHandler:^(RMShop *shop,NSError *error){
+//
+    UIImage *animation = [UIImage animatedImageNamed:@"foodButtonTapped-" duration:1.5f];
+    [self.foodButton setImage:animation forState:UIControlStateNormal];
+    [manager getShopWithCompletionHandler:^(RMShop *shop,NSError *error){
         if (error) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Our hamsters are tired." message:@"It seems like our hamsters didn't find anything... better luck next time!" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
             [alert show];
         }else{
             currentShop = shop;
-            manager.currentShop = shop;
-            NSLog(@"shop: %@",shop);
+//            manager.currentShop = shop;
+            [manager performSelectorOnMainThread:@selector(setCurrentShop:) withObject:shop waitUntilDone:true];
+            NSLog(@"shop: %@",[manager currentShop]);
             
-            [self performSegueWithIdentifier:@"pushToDetail" sender:self];
+//            [self performSegueWithIdentifier:@"pushToDetail" sender:self];
+            [self performSelectorOnMainThread:@selector(performSegueWithIdentifier:sender:) withObject:@"pushToDetail" waitUntilDone:false];
+            [self performSelectorOnMainThread:@selector(resetFoodButton) withObject:nil waitUntilDone:false];
             
         }
     }];
@@ -63,6 +74,10 @@
 //    [manager yelpTest];
     
     
+}
+
+-(void) resetFoodButton{
+    [self.foodButton setImage:[UIImage imageNamed:@"foodButtonStandard.png"] forState:UIControlStateNormal];
 }
 
 - (IBAction)chooseButtonTapped:(id)sender {
@@ -75,10 +90,10 @@
     
     [self.view setBackgroundColor:UIColorFromHEX(BACKGROUND_COLOR)];
  
-    self.foodButton.buttonColor = UIColorFromHEX(BUTTON_COLOR);
-    self.foodButton.shadowColor = UIColorFromHEX(SHADOW_COLOR);
-    self.foodButton.shadowHeight = 5.0f;
-    self.foodButton.cornerRadius = 20.0;
+//    self.foodButton.buttonColor = UIColorFromHEX(BUTTON_COLOR);
+//    self.foodButton.shadowColor = UIColorFromHEX(SHADOW_COLOR);
+//    self.foodButton.shadowHeight = 5.0f;
+//    self.foodButton.cornerRadius = self.foodButton.frame.size.height;
     self.foodButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.foodButton.titleLabel.font = [UIFont boldFlatFontOfSize:55];
     [self.foodButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];

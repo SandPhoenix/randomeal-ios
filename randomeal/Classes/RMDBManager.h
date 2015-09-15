@@ -27,8 +27,9 @@
 
 
 + (RMDBManager*) sharedManager;
-- (void) getShopWithinRadius:(NSNumber*)radius completionHandler:(void (^)(RMShop *shop, NSError *error))completion;
--(void) yelpTest;
+- (void) getShopWithCompletionHandler:(void (^)(RMShop *shop, NSError *error))completion;
+-(void) setCurrentShop:(RMShop *)shop;
+//-(void) yelpTest;
 
 
 @end

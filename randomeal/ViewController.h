@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *radiusSlider;
 @property (nonatomic,strong) RMShop *currentShop;
 @property (nonatomic,strong) RMDBManager *manager;
-@property (weak, nonatomic) IBOutlet FUIButton *foodButton;
+@property (weak, nonatomic) IBOutlet UIButton *foodButton;
 @property (nonatomic,strong) CZPickerView *picker;
 @property (weak, nonatomic) IBOutlet FUIButton *chooseButton;
 @property (strong,nonatomic) UILabel *radiusLabel;

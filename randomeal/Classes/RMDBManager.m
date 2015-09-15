@@ -13,18 +13,19 @@
 
 #import "RMDBManager.h"
 
+RMDBManager *manager;
+
 @implementation RMDBManager
 
 @synthesize database,locationManager,location,districts,prices,kinds,currentShop;
 
 + (RMDBManager*)sharedManager {
-    static RMDBManager *sharedInstance = nil;
-    static dispatch_once_t oncePredicate;
-    dispatch_once(&oncePredicate, ^{
-        sharedInstance = [[self alloc] init];
-    });
     
-    return sharedInstance;
+    if (manager == nil) {
+        manager = [[RMDBManager alloc] init];
+    }
+    
+    return manager;
 }
 
 -(id) init{
@@ -129,21 +130,26 @@
 //    
 //}
 
--(void) getShopWithinRadius:(NSNumber *)radius completionHandler:(void (^)(RMShop *, NSError *))completion{
+-(void) getShopWithCompletionHandler:(void (^)(RMShop *, NSError *))completion{
     
     YPAPISample *yelp = [[YPAPISample alloc] init];
-    [yelp queryTopBusinessInfoForLocation:location radius:radius completionHandler:^(NSDictionary* dict,NSError *error){
+    [yelp queryTopBusinessInfoForLocation:location completionHandler:^(NSDictionary* dict,NSError *error){
         
         if (error) {
             completion(nil,error);
         }else{
             RMShop *shop = [[RMShop alloc] initWithResultSet:dict];
+            currentShop = shop;
             completion(shop,error);
             NSLog(@"done downloading");
         }
         
     }];
     
+}
+
+-(void) setCurrentShop:(RMShop *)shop{
+    currentShop = shop;
 }
 
 //-(void) yelpTest{

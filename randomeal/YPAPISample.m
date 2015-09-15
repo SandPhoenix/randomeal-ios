@@ -16,14 +16,14 @@ static NSString * const kSearchLimit       = @"1";
 
 #pragma mark - Public
 
--(void) queryTopBusinessInfoForLocation:(CLLocation *)location radius:(NSNumber *)radius completionHandler:(void (^)(NSDictionary *, NSError *))completionHandler{
+-(void) queryTopBusinessInfoForLocation:(CLLocation *)location completionHandler:(void (^)(NSDictionary *, NSError *))completionHandler{
 
 //  NSLog(@"Querying the Search API with term \'%@\' and location \'%@'", term, location);
 
     NSString *l = [NSString stringWithFormat:@"%f,%f",location.coordinate.latitude,location.coordinate.longitude];
     
   //Make a first request to get the search results with the passed term and location
-  NSURLRequest *searchRequest = [self _searchRequestWithLocation:l radius:radius];
+  NSURLRequest *searchRequest = [self _searchRequestWithLocation:l];
   NSURLSession *session = [NSURLSession sharedSession];
   [[session dataTaskWithRequest:searchRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
@@ -78,12 +78,11 @@ static NSString * const kSearchLimit       = @"1";
 
  @return The NSURLRequest needed to perform the search
  */
-- (NSURLRequest *)_searchRequestWithLocation:(NSString *)location radius:(NSNumber*)radius{
+- (NSURLRequest *)_searchRequestWithLocation:(NSString *)location{
   NSDictionary *params = @{
                            @"ll": location,
                            @"limit": kSearchLimit,
-                           @"category_filter" : @"restaurants",
-                           @"radius_filter" : radius,
+                           @"category_filter" : @"restaurants"
                            };
 
   return [NSURLRequest requestWithHost:kAPIHost path:kSearchPath params:params];

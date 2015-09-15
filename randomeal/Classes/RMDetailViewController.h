@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "FlatUIKit.h"
 #import "colors.h"
 #import "RMDBManager.h"
 #import "RMShop.h"
@@ -16,5 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic,strong) RMShop *shop;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbImageView;
+- (IBAction)dismissDetailView:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @end

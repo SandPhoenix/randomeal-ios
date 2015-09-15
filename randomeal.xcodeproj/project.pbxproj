@@ -41,6 +41,16 @@
 		EC6466431B85569B00C5DA32 /* strings.json in Resources */ = {isa = PBXBuildFile; fileRef = EC6466421B85569B00C5DA32 /* strings.json */; };
 		EC80BC291B889416007B2A21 /* RMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC80BC281B889416007B2A21 /* RMDetailViewController.m */; };
 		EC80BC2B1B889843007B2A21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC80BC2A1B889843007B2A21 /* MapKit.framework */; };
+		EC80D8DF1BA5F9A800BB7205 /* foodButtonTapped-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8D51BA5F9A700BB7205 /* foodButtonTapped-6@2x.png */; };
+		EC80D8E01BA5F9A800BB7205 /* foodButtonTapped-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8D61BA5F9A700BB7205 /* foodButtonTapped-7@2x.png */; };
+		EC80D8E11BA5F9A800BB7205 /* foodButtonTapped-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8D71BA5F9A700BB7205 /* foodButtonTapped-8@2x.png */; };
+		EC80D8E21BA5F9A800BB7205 /* foodButtonTapped-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8D81BA5F9A700BB7205 /* foodButtonTapped-1@2x.png */; };
+		EC80D8E31BA5F9A800BB7205 /* foodButtonTapped-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8D91BA5F9A700BB7205 /* foodButtonTapped-2@2x.png */; };
+		EC80D8E41BA5F9A800BB7205 /* foodButtonTapped-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8DA1BA5F9A700BB7205 /* foodButtonTapped-3@2x.png */; };
+		EC80D8E51BA5F9A800BB7205 /* foodButtonTapped-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8DB1BA5F9A700BB7205 /* foodButtonTapped-4@2x.png */; };
+		EC80D8E61BA5F9A800BB7205 /* foodButtonTapped-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8DC1BA5F9A700BB7205 /* foodButtonTapped-5@2x.png */; };
+		EC80D8E71BA5F9A800BB7205 /* foodText.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8DD1BA5F9A700BB7205 /* foodText.png */; };
+		EC80D8E81BA5F9A800BB7205 /* foodButtonStandard.png in Resources */ = {isa = PBXBuildFile; fileRef = EC80D8DE1BA5F9A700BB7205 /* foodButtonStandard.png */; };
 		ECA6FFAA1B85E7AB002BBD7D /* Haversine.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA6FFA91B85E7AB002BBD7D /* Haversine.m */; };
 		ECAC6A081B7FEF190060BC9D /* RMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAC6A071B7FEF190060BC9D /* RMDBManager.m */; };
 		ECAC6A0C1B80B6E60060BC9D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAC6A0B1B80B6E60060BC9D /* CoreLocation.framework */; };
@@ -134,6 +144,16 @@
 		EC80BC271B889416007B2A21 /* RMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDetailViewController.h; path = Classes/RMDetailViewController.h; sourceTree = "<group>"; };
 		EC80BC281B889416007B2A21 /* RMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDetailViewController.m; path = Classes/RMDetailViewController.m; sourceTree = "<group>"; };
 		EC80BC2A1B889843007B2A21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EC80D8D51BA5F9A700BB7205 /* foodButtonTapped-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "foodButtonTapped-6@2x.png"; path = "Art/foodButtonTapped-6@2x.png"; sourceTree = "<group>"; };
+		EC80D8D61BA5F9A700BB7205 /* foodButtonTapped-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "foodButtonTapped-7@2x.png"; path = "Art/foodButtonTapped-7@2x.png"; sourceTree = "<group>"; };
+		EC80D8D71BA5F9A700BB7205 /* foodButtonTapped-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "foodButtonTapped-8@2x.png"; path = "Art/foodButtonTapped-8@2x.png"; sourceTree = "<group>"; };
+		EC80D8D81BA5F9A700BB7205 /* foodButtonTapped-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "foodButtonTapped-1@2x.png"; path = "Art/foodButtonTapped-1@2x.png"; sourceTree = "<group>"; };
+		EC80D8D91BA5F9A700BB7205 /* foodButtonTapped-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "foodButtonTapped-2@2x.png"; path = "Art/foodButtonTapped-2@2x.png"; sourceTree = "<group>"; };
+		EC80D8DA1BA5F9A700BB7205 /* foodButtonTapped-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "foodButtonTapped-3@2x.png"; path = "Art/foodButtonTapped-3@2x.png"; sourceTree = "<group>"; };
+		EC80D8DB1BA5F9A700BB7205 /* foodButtonTapped-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "foodButtonTapped-4@2x.png"; path = "Art/foodButtonTapped-4@2x.png"; sourceTree = "<group>"; };
+		EC80D8DC1BA5F9A700BB7205 /* foodButtonTapped-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "foodButtonTapped-5@2x.png"; path = "Art/foodButtonTapped-5@2x.png"; sourceTree = "<group>"; };
+		EC80D8DD1BA5F9A700BB7205 /* foodText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foodText.png; path = Art/foodText.png; sourceTree = "<group>"; };
+		EC80D8DE1BA5F9A700BB7205 /* foodButtonStandard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foodButtonStandard.png; path = Art/foodButtonStandard.png; sourceTree = "<group>"; };
 		ECA6FFA81B85E7AB002BBD7D /* Haversine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Haversine.h; path = Classes/Haversine.h; sourceTree = "<group>"; };
 		ECA6FFA91B85E7AB002BBD7D /* Haversine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Haversine.m; path = Classes/Haversine.m; sourceTree = "<group>"; };
 		ECAC6A061B7FEF190060BC9D /* RMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDBManager.h; path = Classes/RMDBManager.h; sourceTree = "<group>"; };
@@ -277,6 +297,7 @@
 		EC1A25B31B7F2AED00855873 /* randomeal */ = {
 			isa = PBXGroup;
 			children = (
+				EC80D8EA1BA5F9B900BB7205 /* Art */,
 				EC4CA2941B8563E300D9F3AA /* data.db */,
 				EC1A25EA1B7F2C3D00855873 /* Classes */,
 				EC1A25B71B7F2AED00855873 /* AppDelegate.h */,
@@ -338,6 +359,23 @@
 				EC6466421B85569B00C5DA32 /* strings.json */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		EC80D8EA1BA5F9B900BB7205 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				EC80D8D51BA5F9A700BB7205 /* foodButtonTapped-6@2x.png */,
+				EC80D8D61BA5F9A700BB7205 /* foodButtonTapped-7@2x.png */,
+				EC80D8D71BA5F9A700BB7205 /* foodButtonTapped-8@2x.png */,
+				EC80D8D81BA5F9A700BB7205 /* foodButtonTapped-1@2x.png */,
+				EC80D8D91BA5F9A700BB7205 /* foodButtonTapped-2@2x.png */,
+				EC80D8DA1BA5F9A700BB7205 /* foodButtonTapped-3@2x.png */,
+				EC80D8DB1BA5F9A700BB7205 /* foodButtonTapped-4@2x.png */,
+				EC80D8DC1BA5F9A700BB7205 /* foodButtonTapped-5@2x.png */,
+				EC80D8DD1BA5F9A700BB7205 /* foodText.png */,
+				EC80D8DE1BA5F9A700BB7205 /* foodButtonStandard.png */,
+			);
+			name = Art;
 			sourceTree = "<group>";
 		};
 		ECB95A0E1B93F7140003FD91 /* API */ = {
@@ -459,11 +497,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC80D8E71BA5F9A800BB7205 /* foodText.png in Resources */,
+				EC80D8E61BA5F9A800BB7205 /* foodButtonTapped-5@2x.png in Resources */,
 				EC37A4F61B87D9EE00FEF0F7 /* data.db in Resources */,
+				EC80D8DF1BA5F9A800BB7205 /* foodButtonTapped-6@2x.png in Resources */,
+				EC80D8E81BA5F9A800BB7205 /* foodButtonStandard.png in Resources */,
 				EC1A25C41B7F2AED00855873 /* LaunchScreen.storyboard in Resources */,
+				EC80D8E41BA5F9A800BB7205 /* foodButtonTapped-3@2x.png in Resources */,
+				EC80D8E21BA5F9A800BB7205 /* foodButtonTapped-1@2x.png in Resources */,
+				EC80D8E51BA5F9A800BB7205 /* foodButtonTapped-4@2x.png in Resources */,
 				EC1A25C11B7F2AED00855873 /* Assets.xcassets in Resources */,
+				EC80D8E31BA5F9A800BB7205 /* foodButtonTapped-2@2x.png in Resources */,
 				EC1A25BF1B7F2AED00855873 /* Main.storyboard in Resources */,
+				EC80D8E11BA5F9A800BB7205 /* foodButtonTapped-8@2x.png in Resources */,
 				EC6466431B85569B00C5DA32 /* strings.json in Resources */,
+				EC80D8E01BA5F9A800BB7205 /* foodButtonTapped-7@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

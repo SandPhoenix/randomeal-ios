@@ -10,21 +10,23 @@
 
 @implementation RMShop
 
-@synthesize name,address,latitude,longitude,rating,image_url,url;
+//@synthesize name,address,latitude,longitude,rating,image_url,url;
 
 -(id) initWithResultSet:(NSDictionary *)dict{
     if (self == [super init]) {
-            
-        name = dict[@"name"];
-        address = dict[@"location"][@"display_address"][0];
+        
+        NSLog(@"%@",dict);
+        self.name = (NSString*)dict[@"name"];
+        self.address = [NSString stringWithFormat:@"%@\n%@",dict[@"location"][@"display_address"][0],dict[@"location"][@"display_address"][1]];
 //            price = [set stringForColumn:@"price"];
-        latitude = dict[@"location"][@"coordinate"][@"latitude"];
-        longitude = dict[@"location"][@"coordinate"][@"longitude"];
+        self.latitude = (NSNumber*)dict[@"location"][@"coordinate"][@"latitude"];
+        self.longitude = (NSNumber*)dict[@"location"][@"coordinate"][@"longitude"];
 //        kind = [NSNumber numberWithInt:[set intForColumn:@"kind"]];
 //        district = [NSNumber numberWithInt:[set intForColumn:@"district"]];
-        rating = dict[@"rating"];
-        image_url = dict[@"image_url"];
-        url = dict[@"url"];
+        self.rating = (NSNumber*)dict[@"rating"];
+        self.image_url = (NSString*)dict[@"image_url"];
+        self.url = (NSString*)dict[@"url"];
+        self.phone = (NSNumber*)dict[@"phone"];
         
     }
     return self;
@@ -32,9 +34,9 @@
 
 -(void) loadThumbWithImageView:(UIImageView*)view{
     
-    NSLog(@"image url: %@",image_url);
+    NSLog(@"image url: %@",self.image_url);
     
-    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:image_url]]];
+    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.image_url]]];
     requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
     [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"Response: %@", responseObject);
@@ -47,7 +49,7 @@
 }
 
 - (NSString*) description{
-    return [NSString stringWithFormat:@"%@ - %@ - %@, %@",name,address,latitude,longitude];
+    return [NSString stringWithFormat:@"%@ - %@ ",self.address,self.name];
 }
 
 @end
